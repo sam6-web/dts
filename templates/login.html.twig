@@ -1,0 +1,23 @@
+{% extends "layouts/base.html.twig" %}
+
+{% block title %}login{% endblock %}
+
+{% block body %}
+<h1>
+    hello from loginform
+</h1>
+<form action="" novalidate method="POST">
+    <div>
+        <label>Referent utilisateur</label></br>
+        <input type="text" id="text" name="Referent" required autofocus>
+    </div>
+
+    <div>
+        <label for="password">password</label></br>
+        <input type="password" id="password" name="password" required >
+    </div>
+
+    <input type="hidden" name="csrf_token" value=" {{csrf_token('loginRefrent_form')}} ">
+    <input type="submit" value="sign in">
+</form>
+{% endblock %}

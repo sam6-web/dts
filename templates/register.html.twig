@@ -1,0 +1,14 @@
+{% extends "layouts/base.html.twig" %}
+
+{% block title %}register{% endblock %}
+
+{% block body %}
+    <h1>
+    Create User referent
+    </h1>
+    {{form_start(preregistrationForm)}}
+    {{form_widget(preregistrationForm)}}
+    <input type="submit" value="create">
+    {{form_end(preregistrationForm)}}
+
+{% endblock %}

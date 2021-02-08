@@ -1,0 +1,12 @@
+{% extends "layouts/base.html.twig" %}
+
+{% block title %}home{% endblock %}
+
+{% block body %}
+    {% for message in app.flashes('error') %}
+        <div class="flash-notice">
+            {{ message }}
+        </div>
+    {% endfor %}
+    hello from home
+{% endblock %}
